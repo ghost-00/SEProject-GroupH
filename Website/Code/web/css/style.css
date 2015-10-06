@@ -16,10 +16,8 @@ body{
 }
 
 .content{
-	height:100%;
 	width:100%;
 	background-color:#F06;
-	position:relative;
 }
 
 .footer{
@@ -28,4 +26,146 @@ body{
 	background-color:#6C9;
 	position:absolute;
 	bottom:0;
+}
+
+/*****SIGN IN/UP FORM******/
+#form{
+	height:50%;
+	width: 30%;
+	margin:auto !important;
+	background:#C30;
+}
+
+.css-form{
+	padding:10px 0px 0px 0px;
+	margin-left:40px;
+	width: 80%;
+    height: 80vh;
+}
+
+.css-form h4{
+	padding-left: 15px;
+	color: white;
+	opacity:.8;
+}
+
+#password-f{
+	padding-left: 15px;
+	color:white;
+	opacity:.8;
+}
+#fieldset {
+	border:none;
+}
+#css-form input
+{
+	width: 165px;
+	padding: 10px 15px;
+	margin-top: 10px;
+	background: #e9eaea;
+	border: 1px solid #FFF;
+	
+}
+input[type=text].css-textArea
+{
+	padding: 10px 15px;
+	background: #e9eaea;
+	border: 1px solid #e9eaea;
+	color: #6d7273;
+	position:relative;
+
+}
+input[type=text].css-textArea-pw
+{
+	width: 230px !important;
+	padding: 10px 15px;
+	background: #e9eaea;
+	border: 1px solid #e9eaea;
+	color: #6d7273;
+	position:relative;
+}
+
+input[type=button].css-button
+{
+	float:left;
+	background: #d2d2d3 !important;
+	border: 1px solid #d2d2d3;
+	color:#3a3b3c;
+	cursor:pointer;
+}
+input[type=button].css-button-pw
+{
+	width:125px !important;
+	float:left;
+	background: #d2d2d3 !important;
+	border: 1px solid #d2d2d3;
+	color:#3a3b3c;
+	cursor:pointer;
+	margin-right:10px !important;
+}
+input[type=button].css-button-pw2
+{
+	width:125px !important;
+	float:left;
+	background: #3a3b3c !important;
+	border: 1px solid #d2d2d3 !important;
+	color:white;
+	cursor:pointer;
+	margin-right:10px !important;
+}
+
+.warning 
+{
+	color: #fff;
+	display:inline-block;
+	margin-top: 20px;
+	opacity:.8;
+}
+.warning a{
+	color: #FFF;
+	text-decoration:none;
+}
+.warning a:hover{
+	text-decoration:underline;
+	cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox {
+	position: absolute; 
+	overflow: hidden; 
+	clip: rect(0 0 0 0); 
+	height:1px; 
+	width:1px; 
+	margin:-1px; 
+	padding:0;
+	border:0;
+}
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-left:20px;
+	height:15px; 
+	display:inline-block;
+	line-height:15px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:15px;
+	vertical-align:middle;
+	color:#FFF;
+	opacity:.8;
+	cursor:pointer;
+	
+}
+input[type=checkbox].css-checkbox + label.css-label a {
+	cursor:pointer;
+	color:#FFF;
+	text-decoration:none;
+	opacity:1;
+}
+input[type=checkbox].css-checkbox + label.css-label a:hover {
+	text-decoration:underline;
+}
+input[type=checkbox].css-checkbox:checked + label.css-label {
+	background-position: 0 -15px;
+}					
+.css-label{ 
+	background-image:url(../images/mac-style.png) 
 }
