@@ -46,6 +46,12 @@ $app['translator'] = $app->share($app->extend('translator', function($translator
     return $translator;
 }));
 ////----------------------------bdd------------------
+////----------------------------variable global------------------
+$page=array();
+$page['titre']='';
+$page['description']='';
+$page['key']='';
+
 
 /*
  *fin inclusion module
@@ -60,8 +66,8 @@ $app['translator'] = $app->share($app->extend('translator', function($translator
  /*--------------------------------------------------------------------------------------------------------------------------------------*/
 // On définit une route pour l'url /
 $app->get('/', function(Application $app) {
-   $titre='Charles Lorraine';
-   $description='quia Montius inter dilancinantium manus';
+   	$titre='Charles Lorraine';
+   	$description='quia Montius inter dilancinantium manus';
 	$keywords='Charles, Lorraine, tournois de tennis';
     return $app['twig']->render('web/index.html', array('title' => $titre,
 															'description' => $description,
