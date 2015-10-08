@@ -29,11 +29,24 @@ body{
 }
 
 /*****SIGN IN/UP FORM******/
-#form{
-	height:50%;
+#form-sign-in{
 	width: 30%;
-	margin:auto !important;
-	background:#C30;
+	margin: auto !important;
+	background: #C30;
+}
+
+#form-sign-up{
+	width: 30%;
+	margin: auto !important;
+	background: #C30;
+	display: none;
+}
+
+#form-password{
+	width: 30%;
+	margin: auto !important;
+	background: #C30;
+	display: none;
 }
 
 .css-form{
