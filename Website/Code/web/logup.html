@@ -2,25 +2,41 @@
     <div id="form-sign-up"><!-- Create a new account --> 
         <div class="css-form">
         
-        <h4>Create a new account</h4>
+        <h4>Créer un compte</h4>
         
         <form id="css-form" action="#" method="post"><!-- connect form -->
           <fieldset id="fieldset">
-                  <input name="Nom"  id="firstnam" placeholder="Last name" type="text" class="css-textArea" title="Nom" />
+                  M.<input type="radio" name="Title" value="M." checked> 
+                  Mme.<input type="radio" name="Title" value="Mme.">
+                  Mlle.<input type="radio" name="Title" value="Mlle." > 
+            
+                  <input name="UserFirstName"  id="UserFirstName" placeholder="Nom" type="text" class="css-textArea" title="Nom" />
                   
-                  <input name="Prenom"  id="lastname" placeholder="First nam" type="text" class="css-textArea" title="Prénom" />
+                  <input name="UserLastName"  id="UserLastName" placeholder="Prénom" type="text" class="css-textArea" title="Prénom" />
                  
-                  <input name="email"  id="email" placeholder="Email" type="text" class="css-textArea" title="Email" />
+                  <input name="UserEmail"  id="UserEmail" placeholder="Email" type="text" class="css-textArea" title="Email" />
     
-                  <input name="wordpass"  id="wordpass" placeholder="Password" type="password" class="css-textArea" title="Mot de passe"/> 
+                  <input name="UserWordPass"  id="UserWordPass" placeholder="Mot de passe" type="password" class="css-textArea" title="Mot de passe"/> 
                   
-                  <input name="wordpass2"  id="wordpass2" placeholder="Confirme password" type="password" class="css-textArea" title="Mot de passe"/>  
-                  
-                  <br />
-                  <br />
+                  <input name="UserWordPass2"  id="UserWordPass2" placeholder="Confirmation du mot de passe" type="password" class="css-textArea" title="Mot de passe"/>
+
+                  <input name="UserAddress"  id="UserAddress" placeholder="Adresse" type="text" class="css-textArea" title="Adresse"/>
+                  <input name="UserAddressN"  id="UserAddressN" placeholder="Numéro" type="number" class="css-textArea" title="Adresse"/>
+                  <input name="UserAddressB"  id="UserAddressB" placeholder="Boite" type="number" class="css-textArea" title="Adresse"/>
+                  <input name="ZipCode"  id="ZipCode" placeholder="Code postal" type="number" class="css-textArea" title="Adresse"/>
+
+                  <input name="UserAddressL"  id="UserAddressL" placeholder="Localité" type="text" class="css-textArea" title="Adresse"/>
                   
                   <input id="box" class="css-checkbox" type="checkbox" />
-                  <label for="box" name="contrat" class="css-label">I agree to <a href="#">Charles Lorraine terms</a></label>
+
+                  <input name="UserPhone"  id="UserPhone" placeholder="GSM" type="number" class="css-textArea" title="Phone"/>
+
+                    <input name="UserBirthDate"  id="UserBirthDate" placeholder="Né(e) le" type="text" class="css-textArea" title="Phone"/>
+
+                  <br/>
+                  <br/>
+
+                  <label for="box" name="contrat" class="css-label">J'accepte <a href="#">les conditions</a></label>
     
                   <a href="#"> <input id="valide" type="button" value="Sign Up" name="connect" class="css-button" /></a>
                   

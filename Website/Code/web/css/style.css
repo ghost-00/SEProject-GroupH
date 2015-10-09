@@ -1,6 +1,10 @@
 body{
-	background:#FFF;
+	background:url(../images/bg.jpg) no-repeat;
+	background-size:cover;
 	color:#000;
+	overflow:hidden;
+	min-height:800px;
+	
 }
 
 #wrapper{
@@ -9,30 +13,46 @@ body{
 }
 
 .header{
-	height:10vh;
+	height:5vh;
 	width:100%;
 	position:relative;
-	background-color:#0CF;
+	background-color:transparent;
+	position:absolute;
 }
 
 .content{
 	width:100%;
-	background-color:#F06;
+	background-color:transparent;
 }
 
 .footer{
 	height:10vh;
 	width:100%;
-	background-color:#6C9;
+	background-color:transparent;
 	position:absolute;
 	bottom:0;
 }
 
 /*****SIGN IN/UP FORM******/
 #form-sign-in{
+	height:60vh;
 	width: 30%;
-	margin: auto !important;
-	background: #C30;
+	background:url(../images/bg.jpg) ;
+	background-size: auto 210%;
+	background-position: center 45%;
+	overflow:hidden;
+	margin-bottom:50%;
+	border-radius: 5%;
+	opacity: 1;
+	-webkit-filter: blur(20px);
+  	filter: blur(20px);
+	box-shadow: 1px 1px 12px #555;
+	z-index: -1;
+	position:absolute;
+	left:35%;
+	min-width:300px;
+	top:20vh;
+	border:#3F6 20px thick;
 }
 
 #form-sign-up{
@@ -50,10 +70,13 @@ body{
 }
 
 .css-form{
-	padding:10px 0px 0px 0px;
-	margin-left:40px;
 	width: 80%;
-    height: 80vh;
+	position:absolute;
+	left:41%;
+	top:25vh;
+	min-width: 60px !important;
+	max-height: 600px !important;
+	height: 80%;
 }
 
 .css-form h4{
@@ -63,17 +86,18 @@ body{
 }
 
 #password-f{
-	padding-left: 15px;
 	color:white;
 	opacity:.8;
 }
 #fieldset {
 	border:none;
+	position:relative;
 }
 #css-form input
 {
-	width: 165px;
-	padding: 10px 15px;
+	width: 20%;
+	display:block;
+	padding: 10px;
 	margin-top: 10px;
 	background: #e9eaea;
 	border: 1px solid #FFF;
@@ -81,7 +105,7 @@ body{
 }
 input[type=text].css-textArea
 {
-	padding: 10px 15px;
+	padding: 10px;
 	background: #e9eaea;
 	border: 1px solid #e9eaea;
 	color: #6d7273;
@@ -91,7 +115,7 @@ input[type=text].css-textArea
 input[type=text].css-textArea-pw
 {
 	width: 230px !important;
-	padding: 10px 15px;
+	padding: 10px;
 	background: #e9eaea;
 	border: 1px solid #e9eaea;
 	color: #6d7273;
@@ -100,12 +124,19 @@ input[type=text].css-textArea-pw
 
 input[type=button].css-button
 {
-	float:left;
+	width: 20%;
 	background: #d2d2d3 !important;
 	border: 1px solid #d2d2d3;
 	color:#3a3b3c;
 	cursor:pointer;
+	display:block;
 }
+
+input[type=button].css-button a
+{
+	text-decoration:none !important;
+}
+
 input[type=button].css-button-pw
 {
 	width:125px !important;
@@ -115,6 +146,7 @@ input[type=button].css-button-pw
 	color:#3a3b3c;
 	cursor:pointer;
 	margin-right:10px !important;
+	display:block;
 }
 input[type=button].css-button-pw2
 {
@@ -127,6 +159,15 @@ input[type=button].css-button-pw2
 	margin-right:10px !important;
 }
 
+#message 
+{
+	padding-left:15px;
+	color: #fff;
+	display:inline-block;
+	margin-top: 20px;
+	opacity:.8;
+	color:#F63;
+}
 .warning 
 {
 	color: #fff;
@@ -154,7 +195,6 @@ input[type=checkbox].css-checkbox {
 	border:0;
 }
 input[type=checkbox].css-checkbox + label.css-label {
-	padding-left:20px;
 	height:15px; 
 	display:inline-block;
 	line-height:15px;

@@ -3,6 +3,8 @@
 // On charge le framework Silex
 require_once 'vendor/autoload.php';
 
+use Symfony\Component\HttpFoundation\Request;
+
 // On définit des noms utiles
 use Silex\Application;
 
@@ -52,6 +54,33 @@ $page['titre']='';
 $page['description']='';
 $page['key']='';
 
+/////-----------Connexion base de donnée -------------------
+class connexion {
+    public $db;
+	//constructeur
+    function __construct() {
+     
+    }
+    //connexion à la base de donnée
+    function active(){
+         try {
+$dns = 'mysql:host=localhost:8889;dbname=SEProject';
+$utilisateur = 'root';
+$motDePasse = 'root';// tu remplace juste le mot de passe par vide
+$db = new PDO( $dns, $utilisateur, $motDePasse );
+}
+catch ( Exception $e ) {
+  die ($e->getMessage());
+  
+}
+  return $db;
+    }
+}
+
+$db1=new connexion;
+$db=$db1->active();
+
+
 
 /*
  *fin inclusion module
@@ -66,6 +95,10 @@ $page['key']='';
  /*--------------------------------------------------------------------------------------------------------------------------------------*/
 // On définit une route pour l'url /
 $app->get('/', function(Application $app) {
+	/*global $db;
+	$req = $db->query("select * from users");
+	$req = $req->fetchAll();
+	print_r($req); */
    	$titre='Charles Lorraine';
    	$description='quia Montius inter dilancinantium manus';
 	$keywords='Charles, Lorraine, tournois de tennis';
@@ -75,8 +108,26 @@ $app->get('/', function(Application $app) {
 															'lang' => $app["session"]->get('lang')));
   });
 
+$app->post('login', function(Application $app, Request $req) {
+	global $db;
+	
+	$username = $db->quote($req->request->get("usernam"));
+	$password = $db->quote($req->request->get("password"));
+	
+	
+	$req = $db->query("select * from users where nam = $username and passwords = $password");
+	$req = $req->fetchAll();
+	
+	if(empty($req)){
+		return "Login ou password incorrect";
+	}else{
+		return "vous etes connecté";
+	}
+});
 
 // On lance l'application
 $app->run();
+
+
 
 ?>

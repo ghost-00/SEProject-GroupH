@@ -1,8 +1,13 @@
 // JavaScript Document
 $(document).ready(function(){
-	
+
+
   $('#login').click(function(){
-	/*To do*/
+	$.post("index.php/login", {usernam: $("#email").val(), password: $("#password").val()}, function(data){
+		
+		$("#message").html(data)
+		
+	});
   });
 	
   $('#new-account').click(function(){
