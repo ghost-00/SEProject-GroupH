@@ -1,48 +1,143 @@
 <div class="content">
-    <div id="form-sign-up"><!-- Create a new account --> 
+    <div id="sign-up-form">
         <div class="css-form">
         
         <h4>Créer un compte</h4>
         
         <form id="css-form" action="#" method="post"><!-- connect form -->
-          <fieldset id="fieldset">
-                  M.<input type="radio" name="Title" value="M." checked> 
-                  Mme.<input type="radio" name="Title" value="Mme.">
-                  Mlle.<input type="radio" name="Title" value="Mlle." > 
-            
+          <fieldset id="fieldset-two-col">
+          		  
+                  <div id="two-col">
+                  	  <label for="text" name="titre" class="css-label2">Titre</label>
+                      <div class="select-style">
+                      <select>
+                        <option value="Monsieur">Monsieur</option>
+                        <option value="Madame">Madame</option>
+                        <option value="Mademoiselle">Mademoiselle</option>
+                      </select>
+                      </div>
+                  </div>
+            	  
+                  <div id="two-col">
                   <input name="UserFirstName"  id="UserFirstName" placeholder="Nom" type="text" class="css-textArea" title="Nom" />
                   
-                  <input name="UserLastName"  id="UserLastName" placeholder="Prénom" type="text" class="css-textArea" title="Prénom" />
-                 
+                  <input name="UserLastName"  id="UserLastName" placeholder="Prénom" type="text" class="css-textArea" title="Prénom" />	
+                  </div>
+                  
+                  <div id="two-col">
                   <input name="UserEmail"  id="UserEmail" placeholder="Email" type="text" class="css-textArea" title="Email" />
-    
+        
                   <input name="UserWordPass"  id="UserWordPass" placeholder="Mot de passe" type="password" class="css-textArea" title="Mot de passe"/> 
+                  </div>
                   
+                  <div id="two-col">
                   <input name="UserWordPass2"  id="UserWordPass2" placeholder="Confirmation du mot de passe" type="password" class="css-textArea" title="Mot de passe"/>
-
-                  <input name="UserAddress"  id="UserAddress" placeholder="Adresse" type="text" class="css-textArea" title="Adresse"/>
-                  <input name="UserAddressN"  id="UserAddressN" placeholder="Numéro" type="number" class="css-textArea" title="Adresse"/>
-                  <input name="UserAddressB"  id="UserAddressB" placeholder="Boite" type="number" class="css-textArea" title="Adresse"/>
+                  </div>
+        		  
+                  <div id="adress">
+                  <input name="UserAddress"  id="UserAddress" placeholder="Adresse" type="text" class="css-textArea-street" title="Adresse"/>
+                  <input name="UserAddressN"  id="UserAddressN" placeholder="Numéro" type="number" class="css-textArea-numb" title="Adresse"/>
+                  <input name="UserAddressB"  id="UserAddressB" placeholder="Boite" type="number" class="css-textArea-numb" title="Adresse"/>
+                  </div>
+                  
+                  <div id="two-col">
                   <input name="ZipCode"  id="ZipCode" placeholder="Code postal" type="number" class="css-textArea" title="Adresse"/>
-
+        
                   <input name="UserAddressL"  id="UserAddressL" placeholder="Localité" type="text" class="css-textArea" title="Adresse"/>
+                  </div>
                   
+                  
+                  
+        		  <div id="two-col">
+                  <input name="UserMobile"  id="UserMobile" placeholder="GSM" type="number" class="css-textArea" title="Phone"/>
+                  <input name="UserPhone"  id="UserPhone" placeholder="Téléphone" type="number" class="css-textArea" title="Phone"/>
+        		  </div>
+                  
+                  <br/>
+                  
+                  <div id="birthday">
+                    <label for="text" name="birthday" class="css-label2">Birthday</label>
+                     
+                      <div class="select-style2">
+                      <select>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                      </select>
+                      </div>
+                      
+                      <div class="select-style2">
+                      <select>
+                        <option value="Janvier">Janvier</option>
+                        <option value="Fevrier">Fevrier</option>
+                        <option value="Mars">Mars</option>
+                        <option value="Avril">Avril</option>
+                        <option value="Mai">Mai</option>
+                        <option value="Juin">Juin</option>
+                        <option value="Juillet">Juillet</option>
+                        <option value="Septembre">Septembre</option>
+                        <option value="Octobre">Octobre</option>
+                        <option value="Novembre">Novembre</option>
+                        <option value="Decembre">Decembre</option>
+                      </select>
+                      </div>
+                   
+                   	  <div class="select-style2">
+                      <select>
+                        <option value="1990">1990</option>
+                        <option value="1991">1991</option>
+                        <option value="1992">1992</option>
+                        <option value="1993">1993</option>
+                        <option value="1994">1994</option>
+                        <option value="1995">1995</option>
+                      </select>
+                      </div>
+                    
+                    </div>
+        
+                  <br/>
+                  <br/>
+        
                   <input id="box" class="css-checkbox" type="checkbox" />
-
-                  <input name="UserPhone"  id="UserPhone" placeholder="GSM" type="number" class="css-textArea" title="Phone"/>
-
-                    <input name="UserBirthDate"  id="UserBirthDate" placeholder="Né(e) le" type="text" class="css-textArea" title="Phone"/>
-
-                  <br/>
-                  <br/>
-
-                  <label for="box" name="contrat" class="css-label">J'accepte <a href="#">les conditions</a></label>
-    
-                  <a href="#"> <input id="valide" type="button" value="Sign Up" name="connect" class="css-button" /></a>
-                  
+			  	  <label for="box" name="contrat" class="css-label">J'accepte les <a href="">conditions d'utilisations</a></label>
+        		  
+                  <div id="two-col">
+                  <input id="confirm-wew" type="button" value="CONFIRM" name="connect" class="css-button-pw" />
+                  <input id="cancel-new" type="button" value="CANCEL" name="connect" class="css-button-pw2" />
+                  </div>
                   <div  class="warning">Have already an account <a id="my-account">Sign In</a></div>
           </fieldset>
         </form><!-- End connect form -->
         </div>
-</div><!-- End create a new account --> 
+    </div>
+    <div id="form-bg-sign-up"><!-- Create a new account --> 
+	</div><!-- End create a new account --> 
 </div>

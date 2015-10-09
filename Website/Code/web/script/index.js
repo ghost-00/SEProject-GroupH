@@ -1,6 +1,7 @@
 // JavaScript Document
 $(document).ready(function(){
-
+  
+  $('#form-bg').show(1000);
 
   $('#login').click(function(){
 	$.post("index.php/login", {usernam: $("#email").val(), password: $("#password").val()}, function(data){
@@ -11,23 +12,34 @@ $(document).ready(function(){
   });
 	
   $('#new-account').click(function(){
-	$('#form-sign-in').hide();
-	$('#form-sign-up').show();
+	$('#sign-in-form').hide();
+	$('#form-bg').hide();
+	$('#form-bg-sign-up').show();
+	$('#sign-up-form').show();
   });
   
   $('#error').click(function(){
-	$('#form-sign-in').hide();
-	$('#form-password').show();
+	$('#sign-in-form').hide();
+	$('#password-form').show();
   });
   
   $('#cancel').click(function(){
-	$('#form-password').hiden();
-	$('#form-sign-in').show();
+	$('#password-form').hide();
+	$('#sign-in-form').show();
+  });
+  
+  $('#cancel-new').click(function(){
+	$('#sign-up-form').hide();
+	$('#form-bg-sign-up').hide();
+	$('#form-bg').show();
+	$('#sign-in-form').show();
   });
 	
   $('#my-account').click(function(){
-	$('#form-sign-up').hide();
-	$('#form-sign-in').show();
+	$('#sign-up-form').hide();
+	$('#form-bg-sign-up').hide();
+	$('#form-bg').show();
+	$('#sign-in-form').show();
   });
   
   $('#valide').click(function(){

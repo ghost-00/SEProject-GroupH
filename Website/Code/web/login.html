@@ -1,26 +1,28 @@
 <div class="content">
-	<div class="css-form">
+	<div id="sign-in-form">
+        <div class="css-form">
+        
+        <h4>Sing in</h4>
+        
+        <div id="message"></div>
+        
+        <form id="css-form" action="#" method="post"><!-- connect form -->
+          <fieldset id="fieldset">
+                 
+                  <input name="email"  id="email" placeholder="Email" type="text" class="css-textArea" title="Email" />
     
-    <h4>Sing in</h4>
+                  <input name="password"  id="password" placeholder="Password" type="password" class="css-textArea" title="Password"/> 
+                  <div><p id="error" class="warning"> <a href="#">Forget?</a></p></div>
+              
     
-    <div id="message"></div>
-    
-    <form id="css-form" action="#" method="post"><!-- connect form -->
-      <fieldset id="fieldset">
-             
-              <input name="email"  id="email" placeholder="Email" type="text" class="css-textArea" title="Email" />
-
-              <input name="password"  id="password" placeholder="Password" type="password" class="css-textArea" title="Password"/> 
-              <div><p id="error" class="warning"> <a href="#">Forget?</a></p></div>
+                  <a href="#"> <input id="login" type="button" value="Sign In" name="connect" class="css-button-pw" /></a>
           
-
-              <a href="#"> <input id="login" type="button" value="Sign In" name="connect" class="css-button-pw" /></a>
-      
-             <div class="warning">Or <a id="new-account">Sign Up</a></div>
-      </fieldset>
-    </form><!-- end connect form -->
+                 <div class="warning">Or <a id="new-account">Sign Up</a></div>
+          </fieldset>
+        </form><!-- end connect form -->
+        </div>
     </div>
-	<div id="form-sign-in"> <!-- Have an account --> 
+	<div id="form-bg"> <!-- Have an account --> 
     
 	</div><!-- End have an account" --> 
     

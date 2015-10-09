@@ -1,14 +1,17 @@
 body{
-	background:url(../images/bg.jpg) no-repeat;
+	background:url(../images/bg2.jpg) no-repeat;
 	background-size:cover;
 	color:#000;
 	overflow:hidden;
 	min-height:800px;
+	height:auto !important;
 	
 }
 
 #wrapper{
+	position:fixed;
 	height:100%;
+	overflow: auto;
 	width:100%;
 }
 
@@ -21,12 +24,12 @@ body{
 }
 
 .content{
-	width:100%;
-	background-color:transparent;
+	width:auto;
+	height:auto !important;
 }
 
 .footer{
-	height:10vh;
+	height:auto;
 	width:100%;
 	background-color:transparent;
 	position:absolute;
@@ -34,49 +37,74 @@ body{
 }
 
 /*****SIGN IN/UP FORM******/
-#form-sign-in{
+#form-bg{
 	height:60vh;
-	width: 30%;
-	background:url(../images/bg.jpg) ;
+	width: 33.3%;
+	background:url(../images/bg2.jpg) ;
 	background-size: auto 210%;
 	background-position: center 45%;
 	overflow:hidden;
-	margin-bottom:50%;
-	border-radius: 5%;
+	border-radius: 15%;
 	opacity: 1;
 	-webkit-filter: blur(20px);
   	filter: blur(20px);
 	box-shadow: 1px 1px 12px #555;
 	z-index: -1;
 	position:absolute;
-	left:35%;
-	min-width:300px;
+	left:33.3%;
+	min-height:400px;
+	min-width:250px;
 	top:20vh;
 	border:#3F6 20px thick;
+	display:none;
 }
 
-#form-sign-up{
-	width: 30%;
-	margin: auto !important;
-	background: #C30;
-	display: none;
+#form-bg-sign-up
+{
+	height:110vh;
+	width: 40%;
+	background:url(../images/bg2.jpg) ;
+	background-size: auto 210%;
+	background-position: center 45%;
+	overflow:hidden;
+	margin-bottom:5%;
+	border-radius: 15%;
+	opacity: 1;
+	-webkit-filter: blur(20px);
+  	filter: blur(20px);
+	box-shadow: 1px 1px 12px #555;
+	z-index: -1;
+	position:absolute;
+	left:30%;
+	min-height:600px;
+	min-width:490px;
+	border:#3F6 20px thick;
+	display:none;
 }
 
-#form-password{
-	width: 30%;
-	margin: auto !important;
-	background: #C30;
-	display: none;
+#sign-in-form{
+	position:absolute;
+	left:38.3%;
+	top:25vh;
+	width:25%;
+}
+
+#sign-up-form{
+	position:absolute;
+	left:30%;
+	display:none;
+	width:40%;
+}
+
+#password-form{
+	position:absolute;
+	left:38.3%;
+	top:25vh;
+	width:27.3%;
+	display:none;
 }
 
 .css-form{
-	width: 80%;
-	position:absolute;
-	left:41%;
-	top:25vh;
-	min-width: 60px !important;
-	max-height: 600px !important;
-	height: 80%;
 }
 
 .css-form h4{
@@ -86,16 +114,25 @@ body{
 }
 
 #password-f{
-	color:white;
+	padding-left:15px;
+	color: #fff;
+	display:inline-block;
+	margin-top: 20px;
 	opacity:.8;
 }
 #fieldset {
 	border:none;
-	position:relative;
+}
+
+#fieldset-two-col {
+	width:500px;
+	border:none;
+	display:inline-table;
 }
 #css-form input
 {
-	width: 20%;
+	width: 90%;
+	min-width:30px;
 	display:block;
 	padding: 10px;
 	margin-top: 10px;
@@ -103,6 +140,56 @@ body{
 	border: 1px solid #FFF;
 	
 }
+#two-col
+{
+	width: 100%;
+	min-width:90%;
+	display:inline-block;
+	margin-top: 10px;
+}
+#two-col input{
+	float:left;
+	width:40%;
+	margin-right:5%;
+}
+#two-col input[type=text].css-textArea
+{		
+}
+#adress
+{
+	width: 100%;
+	min-width:90%;
+	display:inline-block;
+	margin-top: 10px;
+}
+#adress input{
+	float:left;
+	margin-right:2%;
+}
+#adress input[type=text].css-textArea-street
+{	
+	width:60%;	
+}
+#adress input[type=number].css-textArea-numb
+{	
+	width:8%;	
+}
+#birthday
+{
+	width: 100%;
+	min-width:90%;
+	display:inline-block;
+	margin-top: 40px;
+}
+#birthday input{
+	float:left;
+	margin-right:2%;
+}
+#birthday input[type=text].css-textArea-field
+{	
+	width:5%;	
+}
+
 input[type=text].css-textArea
 {
 	padding: 10px;
@@ -114,7 +201,8 @@ input[type=text].css-textArea
 }
 input[type=text].css-textArea-pw
 {
-	width: 230px !important;
+	le
+	width: 90% !important;
 	padding: 10px;
 	background: #e9eaea;
 	border: 1px solid #e9eaea;
@@ -189,12 +277,13 @@ input[type=checkbox].css-checkbox {
 	overflow: hidden; 
 	clip: rect(0 0 0 0); 
 	height:1px; 
-	width:1px; 
+	width:2px; 
 	margin:-1px; 
 	padding:0;
 	border:0;
 }
 input[type=checkbox].css-checkbox + label.css-label {
+	padding-left:20px;
 	height:15px; 
 	display:inline-block;
 	line-height:15px;
@@ -221,4 +310,65 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 }					
 .css-label{ 
 	background-image:url(../images/mac-style.png) 
+}
+.css-label2{ 
+	float:left;
+	color: #fff;
+	opacity:.8;
+	margin-right: 30px;
+	padding-top:10px;
+}
+
+.select-style {
+    margin: 0;
+    border: 1px solid #ccc;
+    width: 130px;
+    overflow: hidden;
+    background-color: #fff;
+
+    background: #fff url(../images/arrowdown.gif) no-repeat 90% 50%;
+}
+
+.select-style select {
+    padding: 10px;
+    width: 120%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+.select-style2 {
+	float:left;
+    margin: 0;
+    border: 1px solid #ccc;
+    width: 80px;
+	margin-left: 20px;
+    overflow: hidden;
+    background-color: #fff;
+
+    background: #fff url(../images/arrowdown.gif) no-repeat 90% 50%;
+}
+
+.select-style2 select {
+    padding: 10px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.select-style2 select:focus {
+    outline: none;
 }
