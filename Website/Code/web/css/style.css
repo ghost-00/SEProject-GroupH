@@ -87,6 +87,7 @@ body{
 	left:38.3%;
 	top:25vh;
 	width:25%;
+	display:none;
 }
 
 #sign-up-form{

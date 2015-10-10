@@ -2,7 +2,7 @@
 $(document).ready(function(){
   
   $('#form-bg').fadeIn(1000);
-  $('#css-form').fadeIn(5000);
+  $('#sign-in-form').fadeIn(2000);
 
   $('#login').click(function(){
 	$.post("index.php/login", {usernam: $("#email").val(), password: $("#password").val()}, function(data){
