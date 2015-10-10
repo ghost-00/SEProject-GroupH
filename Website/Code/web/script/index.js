@@ -1,7 +1,8 @@
 // JavaScript Document
 $(document).ready(function(){
   
-  $('#form-bg').show(1000);
+  $('#form-bg').fadeIn(1000);
+  $('#css-form').fadeIn(5000);
 
   $('#login').click(function(){
 	$.post("index.php/login", {usernam: $("#email").val(), password: $("#password").val()}, function(data){
