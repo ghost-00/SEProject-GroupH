@@ -64,7 +64,7 @@ class connexion {
     //connexion à la base de donnée
     function active(){
          try {
-$dns = 'mysql:host=localhost:8889;dbname=SEProject';
+$dns = 'mysql:host=localhost:8889;dbname=Tennis_tournament';
 $utilisateur = 'root';
 $motDePasse = 'root';// tu remplace juste le mot de passe par vide
 $db = new PDO( $dns, $utilisateur, $motDePasse );
@@ -111,12 +111,13 @@ $app->get('/', function(Application $app) {
 $app->post('login', function(Application $app, Request $req) {
 	global $db;
 	
-	$username = $db->quote($req->request->get("usernam"));
+	$username = $db->quote($req->request->get("username"));
 	$password = $db->quote($req->request->get("password"));
 	
 	
-	$req = $db->query("select * from users where nam = $username and passwords = $password");
+	$req = $db->query("select * from Users where Username = $username and Userpassword = $password");
 	$req = $req->fetchAll();
+	//var_dump($req);
 	
 	if(empty($req)){
 		return "Login ou password incorrect";

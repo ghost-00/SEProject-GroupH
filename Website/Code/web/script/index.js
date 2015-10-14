@@ -5,7 +5,7 @@ $(document).ready(function(){
   $('#sign-in-form').fadeIn(2000);
 
   $('#login').click(function(){
-	$.post("index.php/login", {usernam: $("#email").val(), password: $("#password").val()}, function(data){
+	$.post("index.php/login", {username: $("#email").val(), password: $("#password").val()}, function(data){
 		
 		$("#message").html(data)
 		
