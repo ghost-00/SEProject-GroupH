@@ -4,6 +4,8 @@
         
         <h4>Créer un compte</h4>
         
+        <div id="message2"> test</div>
+        
         <form id="css-form" action="#" method="post"><!-- connect form -->
           <fieldset id="fieldset-two-col">
           		  
@@ -25,13 +27,13 @@
                   </div>
                   
                   <div id="two-col">
-                  <input name="UserEmail"  id="UserEmail" placeholder="Email" type="text" class="css-textArea" title="Email" />
+                  <input name="UserMail"  id="UserMail" placeholder="Email" type="text" class="css-textArea" title="Email" />
         
-                  <input name="UserWordPass"  id="UserWordPass" placeholder="Mot de passe" type="password" class="css-textArea" title="Mot de passe"/> 
+                  <input name="UserPassword"  id="UserPassword" placeholder="Mot de passe" type="password" class="css-textArea" title="Mot de passe"/> 
                   </div>
                   
                   <div id="two-col">
-                  <input name="UserWordPass2"  id="UserWordPass2" placeholder="Confirmation du mot de passe" type="password" class="css-textArea" title="Mot de passe"/>
+                  <input name="UserWordPass2"  id="UserPassword2" placeholder="Confirmation du mot de passe" type="password" class="css-textArea" title="Mot de passe"/>
                   </div>
         		  
                   <div id="adress">
@@ -55,7 +57,9 @@
                   
                   <br/>
                   
-                  <div id="birthday">
+                  
+                  <input name="birthday" id="birthday" type="date" class="css-label2"/> 
+                  <!--<div id="birthday">
                     <label for="text" name="birthday" class="css-label2">Birthday</label>
                      
                       <div class="select-style2">
@@ -119,7 +123,7 @@
                         <option value="1994">1994</option>
                         <option value="1995">1995</option>
                       </select>
-                      </div>
+                      </div>-->
                     
                     </div>
         
@@ -130,7 +134,7 @@
 			  	  <label for="box" name="contrat" class="css-label">J'accepte les <a href="">conditions d'utilisations</a></label>
         		  
                   <div id="two-col">
-                  <input id="confirm-wew" type="button" value="CONFIRM" name="connect" class="css-button-pw" />
+                  <input id="confirm-new" type="button" value="CONFIRM" name="connect" class="css-button-pw" />
                   <input id="cancel-new" type="button" value="CANCEL" name="connect" class="css-button-pw2" />
                   </div>
                   <div  class="warning">Have already an account <a id="my-account">Sign In</a></div>
