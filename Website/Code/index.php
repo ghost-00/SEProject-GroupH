@@ -64,10 +64,11 @@ class connexion {
     //connexion à la base de donnée
     function active(){
          try {
-$dns = 'mysql:host=localhost:8889;dbname=SEProject';
+$dns = 'mysql:host=localhost;dbname=Tennis_Tournament';
 $utilisateur = 'root';
-$motDePasse = 'root';// tu remplace juste le mot de passe par vide
+$motDePasse = '';// tu remplace juste le mot de passe par vide
 $db = new PDO( $dns, $utilisateur, $motDePasse );
+
 }
 catch ( Exception $e ) {
   die ($e->getMessage());
@@ -102,7 +103,7 @@ $app->get('/', function(Application $app) {
    	$titre='Charles Lorraine';
    	$description='quia Montius inter dilancinantium manus';
 	$keywords='Charles, Lorraine, tournois de tennis';
-    return $app['twig']->render('web/index.html', array('title' => $titre,
+    return $app['twig']->render('web/index_staff.html', array('title' => $titre,
 															'description' => $description,
 															'keywords' => $keywords,
 															'lang' => $app["session"]->get('lang')));
