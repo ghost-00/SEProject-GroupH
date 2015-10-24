@@ -63,10 +63,11 @@ class connexion {
     //connexion à la base de donnée
     function active(){
          try {
-$dns = 'mysql:host=localhost:8889;dbname=Tennis_tournament';
+$dns = 'mysql:host=localhost:8889; dbname=Tennis_tournament';
 $utilisateur = 'root';
 $motDePasse = 'root';// tu remplace juste le mot de passe par vide
 $db = new PDO( $dns, $utilisateur, $motDePasse );
+
 }
 catch ( Exception $e ) {
   die ($e->getMessage());
@@ -106,7 +107,11 @@ $app->get('/', function(Application $app) {
 															'keywords' => $keywords,
 															'lang' => $app["session"]->get('lang')));
   });
-
+  
+$app->get('staff', function(Application $app) {
+ 
+    return $app['twig']->render('web/index_staff.html',array('page'=>$page));
+});
 /**************************************
 
     LOGIN
