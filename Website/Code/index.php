@@ -102,7 +102,7 @@ $app->get('/', function(Application $app) {
    	$titre='Charles Lorraine';
    	$description='quia Montius inter dilancinantium manus';
 	$keywords='Charles, Lorraine, tournois de tennis';
-    return $app['twig']->render('web/index.html', array('title' => $titre,
+    return $app['twig']->render('web/home/index.html', array('title' => $titre,
 															'description' => $description,
 															'keywords' => $keywords,
 															'lang' => $app["session"]->get('lang')));
@@ -117,20 +117,24 @@ $app->get('/', function(Application $app) {
 $app->post('login', function(Application $app, Request $req) {
 	global $db;
 	
-	$username = $db->quote($req->request->get("usermail"));
+	$usermail = $db->quote($req->request->get("usermail"));
 	$password = $db->quote($req->request->get("password"));
 	
 	
-	$req = $db->query("select * from Users where Usermail = $usermail and Userpassword = $password");
-	$req = $req->fetchAll();
+	$req = $db->query("select * from Users where UserMail = $usermail and Userpassword = $password");
+	$req = $req->fetch();
 	//var_dump($req);
+	
+	print_r($req);
+	
+	
 	
 	if(empty($req)){
 		return "Login ou password incorrect";
 	}else{
-		return "vous etes connecté";
+		 return "Vous êtes connecté"; /*"<script> window.open('index.php/staff','_self',false) </script>";*/
 	}
-});
+}); 
 
 /*****************************
 
@@ -214,7 +218,7 @@ NULL , $userfirstname , $userlastname , $userbirthday , $useradress , $useradres
 
  $app->get('/staff', function(Application $app ) {
     global $page;
-    $page['titre']='VIDEOS';
+    $page['titre']='staff';
     $page['description']='';
     $page['key']='';
     
