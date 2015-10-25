@@ -225,6 +225,4 @@ NULL , $userfirstname , $userlastname , $userbirthday , $useradress , $useradres
 // On lance l'application
 $app->run();
 
-
-
 ?>

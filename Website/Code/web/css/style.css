@@ -373,3 +373,25 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 .select-style2 select:focus {
     outline: none;
 }
+
+.menu li {
+    padding:00;
+	display:block;
+	line-height:1.7em;/*rounding errors with Mozilla*/
+	font-weight:800;
+	width:8.9em;
+	text-align:center; /* centrage horizontal */
+}
+
+.menu a {
+     font-family:Minion Pro;
+     color:#AFAFAF;
+     font-size:22px;
+     text-decoration:none;
+     margin:0px 10px 0px 10px;
+}
+
+.menu a:hover {color:white;}
+
+
+
