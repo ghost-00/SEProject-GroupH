@@ -225,6 +225,7 @@ NULL , $userfirstname , $userlastname , $userbirthday , $useradress , $useradres
 // On lance l'application
 $app->run();
 
+// Envoie d'un mail de confirmation
 
 
 ?>
