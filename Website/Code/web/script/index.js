@@ -9,9 +9,18 @@ $(document).ready(function(){
   LOGIN
   *******************************/
   $('#login').click(function(){
-	$.post("index.php/login", {usernmail: $("#email").val(), password: $("#password").val()}, function(data){
+	$.post("index.php/login", {usermail: $("#email").val(), password: $("#password").val()}, function(data){
+		data = $.parseJSON(data);
 		
-		$("#message").html(data)
+		if (data.connected == true) {
+			//redirection 
+			$("#message").html("Vous avez bien été connecté.");
+			window.location = 'index.php/staff'; 
+		}
+		else {
+			$("#message").html("Email ou mot de passe erroné.");
+		}
+		
 		
 	});
 	
@@ -39,7 +48,19 @@ $(document).ready(function(){
 									 userbirthday: $("#birthday").val() 
 									 }, function(data){
 		
-		$("#message2").html(data);
+		data = $.parseJSON(data);
+		
+		if (data.encoded == true) {
+			//redirection 
+			$("#message").html("Vous avez bien été enregistré.");
+			$('#sign-up-form').hide();
+			$('#form-bg-sign-up').hide();
+			$('#form-bg').show();
+			$('#sign-in-form').show();
+		}
+		else {
+			$("#message2").html("Vous n'étes pas enregistré");
+		}
 		
 	});
   });
@@ -55,6 +76,7 @@ $(document).ready(function(){
   
   $('#error').click(function(){
 	$('#sign-in-form').hide();
+	$('#form-bg-password').show();
 	$('#password-form').show();
   });
   

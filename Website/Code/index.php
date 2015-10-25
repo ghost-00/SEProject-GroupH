@@ -125,14 +125,12 @@ $app->post('login', function(Application $app, Request $req) {
 	$req = $req->fetch();
 	//var_dump($req);
 	
-	print_r($req);
-	
-	
+	//print_r($req);
 	
 	if(empty($req)){
-		return "Login ou password incorrect";
+		return json_encode(array('connected' => false));
 	}else{
-		 return "Vous êtes connecté"; /*"<script> window.open('index.php/staff','_self',false) </script>";*/
+		return json_encode(array('connected' => true));
 	}
 }); 
 
@@ -168,7 +166,7 @@ $app->post('confirm-new', function(Application $app, Request $req) {
 	//date of creation 
 	$date = date('Y-m-d', strtotime(date('Y-m-d')));
 	
-	echo $userlastname."<br/>";
+	/*echo $userlastname."<br/>";
 	echo $userfirstname."<br/>";
 	echo $usermail."<br/>";
 	//echo password
@@ -184,9 +182,9 @@ $app->post('confirm-new', function(Application $app, Request $req) {
 	echo $usercellPhone."<br/>";
 	echo $userphone."<br/>";
 	
-	echo $userbirthday."<br/>";
+	echo $userbirthday."<br/>";*/
 	
-	$req = $db->query("INSERT INTO  `tennis_tournament`.`users` (
+	$req = $db->exec("INSERT INTO  `tennis_tournament`.`users` (
 `UserId` ,
 `UserFirstName` ,
 `UserLastName` ,
@@ -204,15 +202,23 @@ $app->post('confirm-new', function(Application $app, Request $req) {
 )
 VALUES (
 NULL , $userfirstname , $userlastname , $userbirthday , $useradress , $useradressN , $useradressB , $useradressZ , $useradressL , $userphone ,  $usermail, $usermail,  $userpassword, $date
-)") or die($db->errorInfo()[14]);
+)") or die(json_encode(array('error_db'=> $db->errorInfo()[14])));
 
-	$req = $req->fetchAll();
-	//var_dump($req);
 	
-	if(empty($req)){
-		return "Vous etes enregistré";
+	
+     /*$to      = 'jos.zigabe@gmail.com';
+     $subject = 'SE-Project';
+     $message = 'vous etes enregistré';
+     $headers = 'From: webmaster@example.com' . "\r\n" .
+     'Reply-To: webmaster@example.com' . "\r\n" .
+     'X-Mailer: PHP/' . phpversion();
+
+     mail($to, $subject, $message, $headers);*/
+	
+	if($req == 1){
+		return json_encode(array('encoded' => true));
 	}else{
-		return "Error";
+		return json_encode(array('encoded' => false));
 	}
 });
 
@@ -222,7 +228,7 @@ NULL , $userfirstname , $userlastname , $userbirthday , $useradress , $useradres
     $page['description']='';
     $page['key']='';
     
-    return $app['twig']->render('web/index_staff.html',array('page'=>$page, 'lang' =>'fr', 'title' => 'staff', 'description'=>'staff account', 'keywords'=>'blabla'));
+    return $app['twig']->render('web/staff/staff_user.html',array('page'=>$page, 'lang' =>'fr', 'title' => 'staff', 'description'=>'staff account', 'keywords'=>'blabla'));
 });
 
 
