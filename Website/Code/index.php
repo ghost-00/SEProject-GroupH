@@ -107,11 +107,7 @@ $app->get('/', function(Application $app) {
 															'keywords' => $keywords,
 															'lang' => $app["session"]->get('lang')));
   });
-  
-$app->get('staff', function(Application $app) {
- 
-    return $app['twig']->render('web/index_staff.html',array('page'=>$page));
-});
+
 /**************************************
 
     LOGIN
@@ -204,7 +200,7 @@ $app->post('confirm-new', function(Application $app, Request $req) {
 )
 VALUES (
 NULL , $userfirstname , $userlastname , $userbirthday , $useradress , $useradressN , $useradressB , $useradressZ , $useradressL , $userphone ,  $usermail, $usermail,  $userpassword, $date
-)") or die($db->errorInfo()[2]);
+)") or die($db->errorInfo()[14]);
 
 	$req = $req->fetchAll();
 	//var_dump($req);
@@ -214,6 +210,15 @@ NULL , $userfirstname , $userlastname , $userbirthday , $useradress , $useradres
 	}else{
 		return "Error";
 	}
+});
+
+ $app->get('/staff', function(Application $app ) {
+    global $page;
+    $page['titre']='VIDEOS';
+    $page['description']='';
+    $page['key']='';
+    
+    return $app['twig']->render('web/index_staff.html',array('page'=>$page, 'lang' =>'fr', 'title' => 'staff', 'description'=>'staff account', 'keywords'=>'blabla'));
 });
 
 
